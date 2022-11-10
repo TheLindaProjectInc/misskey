@@ -302,6 +302,7 @@ sleep 1
 $yarniCmd
 msgc "Yarn Install Complete..." $dark_green
 sleep 1
+
 # Rebuild..
 msgc "Now Building Site Data..." $dark_green
 eval "$argCmd $buildCmd"
@@ -371,6 +372,7 @@ sleep 1
 $yarniCmd
 msgc "Yarn Install Complete..." $dark_green
 sleep 1
+
 # Rebuild..
 msgc "Now Building Site Data..." $dark_green
 eval "$argCmd $buildCmd"
