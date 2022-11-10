@@ -18,6 +18,8 @@ tmuxName="misskey"
 
 checkCmd="git checkout develop-metrix"
 fetchCmd="git pull origin develop-metrix"
+instlCmd="npm install"
+buildCmd="NODE_ENV=production npm run build"
 yarncCmd="yarn clean"
 yarniCmd="yarn install"
 buildCmd="yarn build"
@@ -294,9 +296,14 @@ sleep 1
 $yarncCmd
 msgc "Metriverse Cleansed! Rebuilding Simulacrum Cells.." $dark_green
 sleep 1
+$instlCmd
+msgc "Node Install Complete..." $dark_green
+sleep 1
 $yarniCmd
+msgc "Yarn Install Complete..." $dark_green
 sleep 1
 # Rebuild..
+msgc "Now Building Site Data..." $dark_green
 eval "$argCmd $buildCmd"
 msgc "Build Complete! Migrating Site Data.." $dark_green
 sleep 1
@@ -358,9 +365,14 @@ sleep 1
 $yarncCmd
 msgc "Metriverse Cleansed! Rebuilding Simulacrum Cells.." $dark_green
 sleep 1
+$instlCmd
+msgc "Node Install Complete..." $dark_green
+sleep 1
 $yarniCmd
+msgc "Yarn Install Complete..." $dark_green
 sleep 1
 # Rebuild..
+msgc "Now Building Site Data..." $dark_green
 eval "$argCmd $buildCmd"
 msgc "Build Complete! Migrating Site Data.." $dark_green
 sleep 1
