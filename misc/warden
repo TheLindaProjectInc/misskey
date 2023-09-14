@@ -18,12 +18,10 @@ tmuxName="misskey"
 
 checkCmd="git checkout develop-metrix"
 fetchCmd="git pull origin develop-metrix"
-instlCmd="npm install"
-buildCmd="NODE_ENV=production npm run build"
-yarncCmd="yarn clean"
-yarniCmd="yarn install"
-buildCmd="yarn build"
-migraCmd="yarn migrate"
+instlCmd="pnpm install"
+buildCmd="NODE_ENV=production pnpm run build"
+cleanCmd="pnpm clean"
+migraCmd="pnpm migrate"
 
 
 #############################
@@ -293,14 +291,11 @@ msgc "Fetching Latest Simulacrum Data.." $dark_green
 $fetchCmd
 msgc "Checkout Complete! Cleaning Simulacrum.." $dark_green
 sleep 1
-$yarncCmd
+$cleanCmd
 msgc "Metriverse Cleansed! Rebuilding Simulacrum Cells.." $dark_green
 sleep 1
 $instlCmd
 msgc "Node Install Complete..." $dark_green
-sleep 1
-$yarniCmd
-msgc "Yarn Install Complete..." $dark_green
 sleep 1
 
 # Rebuild..
@@ -363,14 +358,11 @@ msgc "Fetching Latest Simulacrum Data.." $dark_green
 $fetchCmd
 msgc "Checkout Complete! Cleaning Simulacrum.." $dark_green
 sleep 1
-$yarncCmd
+$cleanCmd
 msgc "Metriverse Cleansed! Rebuilding Simulacrum Cells.." $dark_green
 sleep 1
 $instlCmd
 msgc "Node Install Complete..." $dark_green
-sleep 1
-$yarniCmd
-msgc "Yarn Install Complete..." $dark_green
 sleep 1
 
 # Rebuild..
