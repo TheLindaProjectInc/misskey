@@ -10,7 +10,7 @@ argDev="NODE_ENV=development"
 argPrd="NODE_ENV=production"
 argCmd=""
 # Script Cmd to execute
-srcCmd="npm start"
+srcCmd="pnpm start"
 
 # Tmux instance variables
 tmuxFile="/tmp/worker"
